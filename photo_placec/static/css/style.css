@@ -1,0 +1,314 @@
+:root {
+    --header-height: 50px;
+    --footer-padding: 25px;
+    --containerColor: #fdf6ee;
+    --containerColor2: #f8fde1;
+    --purple: #331832;
+    --cardHeight: 250px;
+  }
+  
+  /*------------------------ ШАПКА ------------------------*/
+  
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: var(--header-height);
+    width: 100%;
+    padding: 0;
+    font-family: Oswald;
+    color: #694D75;
+    letter-spacing: 1px;
+    border-bottom: solid 1px #181820;
+    background-color: var(--purple);
+  }
+  .mobileHeader {
+    display: none;
+  }
+  #hiddenMenu {
+    display: none;
+  }
+  
+  .mainLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .headerLink {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .headerLink:hover {
+    background-color: #412c40;
+  }
+  
+  
+  /*------------------------ ОБЩЕЕ ------------------------*/
+  
+  body {
+    font-family: sans-serif;
+    color: #1B5299;
+    background-color: #F1ECCE;
+  }
+  
+  .content-container {
+    min-height: calc(100vh
+      - var(--header-height)
+      - 2 * var(--footer-padding)
+      - 9px);
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  section {
+    font-size: x-large;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: Oswald;
+    text-align: center;
+  }
+  
+  h2 {
+    font-family: Oswald;
+    text-align: center;
+    color: var(--purple);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  @font-face {
+    font-family: "Oswald";
+    src: url("Oswald-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  
+  /*------------------------ ГЛАВНАЯ ------------------------*/
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .aCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 15px;
+  }
+  
+  .card {
+    height: var(--cardHeight);
+    width: 40%;
+    padding: 0 15px 15px;
+    margin: 25px auto 20px;
+    border: 2px solid var(--purple);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  
+  .card:hover{
+    transform: scale(1.05);
+    z-index: 1;
+  }
+  .card:hover .mainCardImage {
+    overflow: hidden;
+  }
+  .card:hover .mainCardImage img {
+    opacity: 0.2;
+    object-fit: cover;
+  }
+  
+  .card:hover .cardHiddenText {
+    display: block;
+    color: white;
+  }
+  
+  .mainCardImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    transition: inherit;
+    background-color: #333333;
+  }
+  
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: inherit;
+  }
+  
+  .cardHiddenText {
+    position: absolute;
+    width: 90%;
+    display: none;
+    color: #333333;
+    transition: inherit;
+  }
+  
+  .images {
+    max-height: 50vh;
+    margin: 20px;
+  }
+  
+  /*------------------------ СТАТЬИ ------------------------*/
+  
+  article {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--containerColor2);
+    padding: 15px;
+    border: 1px solid #d2cbc2;
+  }
+  .article_info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .date::before {
+    content: "Дата открытия: ";
+  }
+  .article_link::before {
+    content: "подробнее...";
+  }
+  
+  /*------------------------ ПОДВАЛ ------------------------*/
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #331832;
+    color: #694D75;
+    padding: 20px;
+  }
+  
+  p {
+    text-align: justify;
+  }
+  
+  /*------------------------ АДАПТИВНОСТЬ ------------------------*/
+  
+  @media screen and (max-width: 1020px) {
+    .content-container {
+      min-height: calc(100vh
+      - var(--header-height)
+      - 2 * var(--footer-padding)
+      - 9px);
+      width: 100%;
+    }
+  
+    @media screen and (max-width: 900px) {
+      header {
+        display: none;
+      }
+  
+      .mobileHeader {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: var(--header-height);
+        width: 100%;
+        padding: 0;
+        font-family: Oswald;
+        color: #694D75;
+        letter-spacing: 1px;
+        border-bottom: solid 1px #181820;
+        background-color: var(--purple);
+      }
+  
+      #menuBurgerContainer {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+  
+      #menuBurger {
+        padding: 0 15px;
+        cursor: pointer;
+      }
+  
+      #hiddenMenu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: calc(var(--header-height) - 1);
+        left: 0;
+        height: 100vh;
+        width: 80vw;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        background-color: var(--purple);
+        border-top: 1px solid #694D75;
+      }
+      #hiddenMenu.active {
+        transform: translateX(0);
+      }
+  
+  
+      .cardContainer {
+        display: flex;
+        flex-flow: column nowrap;
+      }
+  
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: var(--cardHeight);
+        width: 90%;
+        padding: 0 15px 15px;
+        margin: 25px auto 20px;
+        border: 2px solid var(--purple);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+        transition: 0.5s;
+        cursor: pointer;
+      }
+  
+  
+      .images {
+        max-height: none;
+        width: 100%;
+        margin: 0px;
+      }
+  
+      article {
+        margin-top: 20px;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--containerColor2);
+        padding: 10px;
+        border: 1px solid #d2cbc2;
+      }
+    }
+  }
+  

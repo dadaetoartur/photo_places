@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Открытия в физике</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/zeroing.css' %}">
+</head>
+<body
+  link="#8693AB"
+  alink="#8693AB"
+  vlink="#8693AB"
+>
+<header>
+  <a class="headerLink" href="/photo_places/">Главная</a>
+  <nav class="mainLinks">
+    <a class="headerLink" href="/photo_places/moskow">Москва</a>
+    <a class="headerLink" href="/photo_places/saint-petersburg">Санкт-Петербург</a>
+    <a class="headerLink" href="/photo_places/kazan">Казань</a>
+    <a class="headerLink" href="/photo_places/nizhnekamsk">Нижнекамск</a>
+  </nav>
+</header>
+<header class="mobileHeader">
+  <svg  version="1.1" id="menuBurger" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px">
+    <path stroke="#8693AB" d="M0 2 H 25 M0 12 H 25 M0 22 H 25"/>
+  </svg>
+  <a class="headerLink" href="/photo_places/">Главная</a>
+</header>
+<nav id="hiddenMenu">
+  <a class="headerLink" href="/photo_places/moskow">Москва</a>
+  <a class="headerLink" href="/photo_places/saint-Petersburg">Санкт-Петербург</a>
+  <a class="headerLink" href="/photo_places/kazan">Казань</a>
+  <a class="headerLink" href="/photo_places/nizhnekamsk">Нижнекамск</a>
+</nav>
+<div class="content-container">
+  <h1>Самые красивые места для фотографий в Санкт-Петербурге</h1>
+  <article>
+    <h3>Завод "Красный треугольник"</h3>
+    <p>Идеальное место для любителей петербургских заброшек и урбанистических фотосессий. Завод здесь работал с 1860 года, а в 2000-х разорился. Интересный факт: на «Красном треугольнике» снимали несколько сцен для фильма Фёдора Бондарчука «Сталинград». Так что локация проверенная! Для традиционных свадебных фотографий место вряд ли подойдёт, а вот для постапокалиптичных снимков в стиле стимпанк — легко.</p>
+    <img class="images" src="https://cdn.tripster.ru/photos/aabd2586-7150-4e3d-b915-88002ba86fed.jpg">
+  </article>
+  <article>
+    <h3>Китайский "Сад дружбы"</h3>
+    <p>Отличное место для любителей азиатской культуры. «Сад дружбы» — подарок Санкт‑Петербургу от города-побратима Шанхая. Любопытно, что часть материалов и некоторые растения (например, сосны и ивы) доставили прямо из Китая. Обустройством территории тоже занимались китайские специалисты. Хотя сад и небольшой, антураж для фотографий здесь идеальный. Например, изящная беседка-пагода, вход в которую «охраняют» каменные китайские львы. Или миниатюрный водопад, впадающий в пруд с фонтанчиками.</p>
+    <img class="images" src="https://cdn.tripster.ru/photos/9fa4b788-b8f3-41f0-9bdd-d256a383dce3.jpg">
+  </article>
+</div>
+
+<footer>
+  2021 (с) dadaetoartur MIREA student. Все права защищены.
+</footer>
+<script src="scripts.js"></script>
+
+</body>
+</html>

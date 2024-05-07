@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Открытия в физике</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/zeroing.css' %}">
+</head>
+<body
+  link="#8693AB"
+  alink="#8693AB"
+  vlink="#8693AB"
+>
+<header>
+  <a class="headerLink" href="/photo_places/">Главная</a>
+  <nav class="mainLinks">
+    <a class="headerLink" href="/photo_places/moskow">Москва</a>
+    <a class="headerLink" href="/photo_places/saint-petersburg">Санкт-Петербург</a>
+    <a class="headerLink" href="/photo_places/kazan">Казань</a>
+    <a class="headerLink" href="/photo_places/nizhnekamsk">Нижнекамск</a>
+  </nav>
+</header>
+<header class="mobileHeader">
+  <svg  version="1.1" id="menuBurger" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px">
+    <path stroke="#8693AB" d="M0 2 H 25 M0 12 H 25 M0 22 H 25"/>
+  </svg>
+  <a class="headerLink" href="mainPage.html">Главная</a>
+</header>
+<nav id="hiddenMenu">
+  <a class="headerLink" href="/photo_places/moskow">Москва</a>
+  <a class="headerLink" href="/photo_places/saint-petersburg">Санкт-Петербург</a>
+  <a class="headerLink" href="/photo_places/kazan">Казань</a>
+  <a class="headerLink" href="/photo_places/nizhnekamsk">Нижнекамск</a>
+</nav>
+<div class="content-container">
+  <h1>Самые красивые места для фотографий в Москве</h1>
+  <article>
+    <h3>Парк Малевича</h3>
+    <p>Парк недалеко от села Немчиновка открылся в конце 2020 года. Место назвали в честь основателя супрематизма не просто так: Казимир Малевич приезжал сюда за вдохновением и, если верить легенде, писал картины у местного дуба, который теперь называется «дубом Малевича».</p>
+    <img class="images" src="https://opis-cdn.tinkoffjournal.ru/mercury/photospots-msc_ph-10.kkey5pbmkxa8..jpg?preset=image_760w">
+  </article>
+  <article>
+    <h3>Аптекарский огород</h3>
+    <p>Идея разбить на этом месте сад принадлежит Петру Первому. В 1706 году он заложил на тогда еще окраине Москвы огород для выращивания лекарственных трав: здесь до сих пор стоит посаженная им лиственница. Ботсад пережил пожар 1812 года, войну, перешел к Московскому университету и получил статус старейшего в России.</p>
+    <img class="images" src="https://opis-cdn.tinkoffjournal.ru/mercury/photospots-msc_ph-7.pkylx6t28ymz..jpg?preset=image_760w">
+  </article>
+</div>
+
+<footer>
+  2021 (с) dadaetoartur MIREA student. Все права защищены.
+</footer>
+<script src="scripts.js"></script>
+
+</body>
+</html>
